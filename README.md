@@ -64,7 +64,7 @@ The portfolio includes an interactive fan-stacked certificate gallery featuring 
 
 ## 🌍 Live Portfolio
 
-** **[**https://impana122005.github.io/Portfolio/**](https://impana122005.github.io/Portfolio/)  
+https://impana122005.github.io/Portfolio/  
 
 ---
 
