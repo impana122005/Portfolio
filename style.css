@@ -929,16 +929,16 @@ rgba(139,92 ,246,.7);
 }
 
 #contact{
-    position: relative;
-    top: -30px;   /* Move the entire contact section upward */
+    padding-top: 70px;
+    padding-bottom: 80px;
 }
 
 #contact .section-tag{
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 #contact h2{
-    margin: 0 0 50px;
+    margin-bottom: 50px;
 }
 
 #contact .contact-card{
@@ -1516,7 +1516,7 @@ rgba(139,92 ,246,.7);
 }
 
 footer{
-    margin-top: -85px;
+    margin-top: -60px;
     padding: 0;
     text-align: center;
     font-size: 1.10rem;
