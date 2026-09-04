@@ -69,18 +69,46 @@ const cards = [...stack.querySelectorAll(".stack-card")];
 let current = 0;
 
 function updateStack() {
-    cards.forEach(card => card.classList.remove("front", "middle", "back"));
 
-    cards[current].classList.add("front");
-    cards[(current + 1) % cards.length].classList.add("middle");
-    cards[(current + 2) % cards.length].classList.add("back");
+    cards.forEach((card, i) => {
+        card.classList.remove("front", "middle", "back");
+
+        // Hide certificates that are already viewed
+        card.style.display = i < current ? "none" : "block";
+    });
+
+    if (cards[current]) {
+        cards[current].classList.add("front");
+    }
+
+    if (cards[current + 1]) {
+        cards[current + 1].classList.add("middle");
+    }
+
+    if (cards[current + 2]) {
+        cards[current + 2].classList.add("back");
+    }
 }
 
 updateStack();
 
-stack.addEventListener("click", () => {
-    current = (current + 1) % cards.length;
-    updateStack();
+stack.addEventListener("click", (e) => {
+    const rect = stack.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+
+    if (clickX < rect.width / 2) {
+        // Left side → Previous certificate
+        if (current > 0) {
+            current--;
+            updateStack();
+        }
+    } else {
+        // Right side → Next certificate
+        if (current < cards.length - 1) {
+            current++;
+            updateStack();
+        }
+    }
 });
 
 const glow = document.querySelector(".cursor-glow");
@@ -196,3 +224,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const stackTooltip = document.getElementById("stackTooltip");
+const certificateSection = document.getElementById("certificates");
+
+if (stackTooltip && certificateSection) {
+
+    const tooltipObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                stackTooltip.classList.add("show");
+
+                setTimeout(() => {
+                    stackTooltip.classList.remove("show");
+                }, 3000);
+
+                tooltipObserver.disconnect(); // Show only once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    tooltipObserver.observe(certificateSection);
+}
