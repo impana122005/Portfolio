@@ -1511,11 +1511,20 @@ rgba(139,92 ,246,.7);
     margin-bottom: 8px;
 }
 
+#contact{
+    padding-bottom: 80px;
+}
+
 footer{
     margin-top: -75px;
-    padding: 8px 0;
+    padding: 10px 0;
     text-align: center;
     font-size: 1.10rem;
+}
+
+footer p{
+    line-height: 1.8;
+    letter-spacing: 0.4px;
 }
 
 #home .glass::before,
