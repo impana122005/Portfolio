@@ -1577,7 +1577,7 @@ footer p{
     border-radius: 12px;
 }
 
-..close-modal{
+.close-modal{
     position: fixed !important;
     top: 16px;
     right: 16px;
@@ -1795,5 +1795,29 @@ footer p{
     .project-card img{
         height: 180px;
         object-fit: cover;
+    }
+
+    .certificate-stack{
+        width: 300px;
+        height: 340px;
+        margin: 20px auto;
+    }
+
+    .stack-card{
+        width: 260px;
+        height: 360px;
+        border-radius: 18px;
+    }
+
+    .stack-card img{
+        width: 100%;
+        height: calc(100% - 45px);
+        object-fit: cover;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .stack-card h3{
+        font-size: 13px;
+        bottom: 10px;
     }
 }
