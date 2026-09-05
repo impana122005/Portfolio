@@ -1494,11 +1494,15 @@ rgba(139,92 ,246,.7);
 .demo-btn{
     background: linear-gradient(135deg,#8B5CF6,#2563EB);
     color: white;
+    border: 1.5px solid #4F8CFF;
+    border-radius: 999px;
 }
 
 .demo-btn:hover{
     transform: translateY(-3px);
     background: rgba(79,140,255,.12);
+    border: 1.5px solid #4F8CFF;
+    border-radius: 999px;
     box-shadow: 0 0 18px rgba(139,92,246,.35);
 }
 
@@ -1573,13 +1577,24 @@ footer p{
     border-radius: 12px;
 }
 
-.close-modal{
-    position:absolute;
-    top:20px;
-    right:35px;
-    font-size:42px;
-    color:white;
-    cursor:pointer;
+..close-modal{
+    position: fixed !important;
+    top: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(17,24,39,.9);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 0 18px rgba(56,189,248,.4);
+    line-height: 1;
 }
 
 .view-cert:hover{
@@ -1747,19 +1762,12 @@ footer p{
         font-size: 1.1rem;
     }
 
-    .close-modal{
+   .close-modal{
         top: 12px;
-        right: 15px;
-        font-size: 32px;
-        z-index: 10001;
-        padding: 8px;
-        background: rgba(17,24,39,.8);
-        border-radius: 50%;
+        right: 12px;
         width: 42px;
         height: 42px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 26px;
     }
 
     .modal-content{
