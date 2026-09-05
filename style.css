@@ -1704,6 +1704,7 @@ footer p{
         font-size: 1.8rem;
         cursor: pointer;
         z-index: 1001;
+        margin-left: auto; 
     }
 
     nav ul{
