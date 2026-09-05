@@ -247,3 +247,27 @@ if (stackTooltip && certificateSection) {
 
     tooltipObserver.observe(certificateSection);
 }
+
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+if(menuBtn && navMenu){
+
+    menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+
+        const icon = menuBtn.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+
+            const icon = menuBtn.querySelector("i");
+            icon.classList.add("fa-bars");
+            icon.classList.remove("fa-xmark");
+        });
+    });
+}
