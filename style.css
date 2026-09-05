@@ -1821,3 +1821,28 @@ footer p{
         bottom: 10px;
     }
 }
+
+@media (max-width:768px){
+
+    .certificate-stack{
+        width: 280px !important;
+        height: 300px !important;
+        margin: 20px auto !important;
+        transform: scale(0.75);
+        transform-origin: center top;
+    }
+
+    .stack-card{
+        width: 280px !important;
+        height: 370px !important;
+        border-radius: 18px !important;
+    }
+
+    .stack-card img{
+        border-radius: 18px 18px 0 0 !important;
+    }
+
+    .stack-card h3{
+        font-size: 12px !important;
+    }
+}
