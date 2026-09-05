@@ -1707,6 +1707,14 @@ footer p{
         margin-left: auto; 
     }
 
+    nav{
+        display: flex !important;
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+        width: 100%;
+    }
+
     nav ul{
         position: fixed;
         top: 0;
